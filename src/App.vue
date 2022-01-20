@@ -1,7 +1,7 @@
 <template>
 
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="My First Vue Project"/>
+  <HelloWorld msg="Jordan's Test Lab"/>
   <ToDoList />
 </template>
 
