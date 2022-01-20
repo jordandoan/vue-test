@@ -5,22 +5,22 @@
     <input v-model="newTask" v-on:keyup.enter="addTask"><button @click="addTask">Add task</button>
     <div>
       <ul>
-        <li 
-          v-for="(todo, index) in todos" 
-          v-bind:key="index" @click="removeTask(index)"
-          class="list-item"
-        >
-          {{ todo }}
-        </li>
+        <ListItem 
+          v-for="(todo, index) in todos"
+          :task=todo
+          v-bind:key="index" 
+          @click="removeTask(index)"
+        />
       </ul>
     </div>
-
   </div>
 </template>
 
 <script>
+import ListItem from '@/components/ToDoListItem.vue'
 export default {
   name: 'ToDoList',
+  components: {ListItem},
   data () {
     return {
       newTask: "",
@@ -58,15 +58,4 @@ h3 {
 a {
   color: #42b983;
 }
-
-li {
-  font-size: 1.2em;
-  width: 20%;
-  margin: 0 auto;
-}
-
-.list-item:hover {
-  text-decoration: line-through;
-}
-
 </style>
