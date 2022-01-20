@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <HelloWorld msg="Jordan's Test Lab"/>
-    <router-link to="/todolist">To Do List</router-link>
+    <router-link to="/todolist">To Do List!</router-link>
   </div>
 </template>
 
